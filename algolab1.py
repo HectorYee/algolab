@@ -64,6 +64,53 @@ def rotate_left_3():
     arr[len(arr)-1] = temp
     print arr
 
+# Question 7
+def biggest_two():
+    input1 = raw_input("Enter first array of two numbers: ")
+    input2 = raw_input("Enter second array of two numbers: ")
+    arr1 = [int(x) for x in input1.split()]
+    arr2 = [int(x) for x in input2.split()]
+    sum1 = 0
+    sum2 = 0
+    for x in range(0, 2):
+        sum1 += arr1[x]
+        sum2 += arr2[x]
+    if sum1 > sum2:
+        print arr1
+    elif sum2 > sum1:
+        print arr2
+    else:
+        print("a")
+
+
+#=======================================================================================================================
+# Question 1
+def mapBully():
+    key_input  = raw_input("Enter key value: ").split()
+    value_input = raw_input("Enter value: ").split()
+    map = {}
+    for x in range(0, len(key_input)):
+        if x == 0:
+            map[key_input[x]] = ''
+        elif x == 1:
+            map[key_input[x]] = value_input[0]
+        else:
+            map[key_input[x]] = value_input[x]
+    print map
+
+# Question 2
+def word0():
+    input = raw_input("Enter a string of keys: ").split()
+    input = list(set(input))
+    print input
+    dict = {}
+    for x in range(0, len(input)):
+        dict[input[x]] = 0
+    print dict
+
+
+
+
 
 
 
@@ -101,3 +148,6 @@ def rotate_left_3():
 # print fibonacci_recursion(10)
 # print fibonacci_iterative(10)
 # rotate_left_3()
+# biggest_two()
+# mapBully()
+word0()

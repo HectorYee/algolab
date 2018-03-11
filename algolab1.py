@@ -1,5 +1,6 @@
 import random
 
+# Question 1
 def sum3():
     input = raw_input("Enter three numbers here: ")
     arr = [int(x) for x in input.split()]
@@ -8,6 +9,7 @@ def sum3():
         sum3 += arr[i]
     print sum3
 
+# Question 2
 def got6():
     input = raw_input("Enter a series of number: ")
     arr = [int(x) for x in input.split()]
@@ -16,11 +18,13 @@ def got6():
             got6 = True
     print got6
 
+# Question 3
 def even():
     even = 0
     for i in range(0, 101, 2):
         print even + i
 
+# Question 4
 def linear_search():
     # arr = []
     arr = random.sample(range(1000), 100)
@@ -33,6 +37,7 @@ def linear_search():
             print(x+1)
     return "Number not in the array"
 
+# Question 5
 def fibonacci_recursion(n):
     if n <= 1:
         return n
@@ -49,16 +54,21 @@ def fibonacci_iterative(n):
         prev_fib = temp
     return temp
 
+# Question 6
 def rotate_left_3():
     input = raw_input("Enter numbers: ")
     arr = [int(x) for x in input.split()]
-    temp = arr[len(arr)-1]
-    for x in range(0, len(arr)):
-        arr[x] = arr[x]
+    temp = arr[0]
+    for x in range(0, len(arr)-1):
+        arr[x] = arr[x+1]
+    arr[len(arr)-1] = temp
+    print arr
 
 
 
-rotate_left_3()
+
+
+
 
 
 
@@ -90,3 +100,4 @@ rotate_left_3()
 # linear_search()
 # print fibonacci_recursion(10)
 # print fibonacci_iterative(10)
+# rotate_left_3()

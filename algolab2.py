@@ -73,10 +73,13 @@ def insertion_sort(arr):
 
 
 
+def shell_sort(arr):
+    n = len(arr)
+    sublistcount = n/2
+    for gap in range(sublistcount):
+        for
 
 
-
-bucket_sort(arr1)
 
 
 
@@ -85,3 +88,4 @@ bucket_sort(arr1)
 
 # bubble_sort(arr)
 # counting_sort(arr,arrB,9)
+# bucket_sort(arr1)
